@@ -23,7 +23,10 @@ function randomPlay() {
 
 function getPlayerMove(move) {
     var move = value();
-    if (value = "rock") {
+    // Write an expression that operates on a variable called `move`
+    // If a `move` has a value, your expression should evaluate to that value.
+    // However, if `move` is not specified / is null, your expression should equal `getInput()`.
+      if (value = "rock") {
         return "rock";
     } else if (value = "paper") {
         return "paper";
@@ -32,15 +35,14 @@ function getPlayerMove(move) {
     } else {
         return "getInput()"
         }
-    // Write an expression that operates on a variable called `move`
-    // If a `move` has a value, your expression should evaluate to that value.
-    // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    return /* Your Expression */;
 }
 
 function getComputerMove(move) {
     var move = value();
-    if (value = "rock") {
+    // Write an expression that operates on a variable called `move`
+    // If a `move` has a value, your expression should evaluate to that value.
+    // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
+      if (value = "rock") {
         return "rock";
     } else if (value = "paper") {
         return "paper";
@@ -49,10 +51,6 @@ function getComputerMove(move) {
     } else {
         return "randomPlay()"
         }
-    // Write an expression that operates on a variable called `move`
-    // If a `move` has a value, your expression should evaluate to that value.
-    // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return /* Your Expression */;
 }
 
 function getWinner(playerMove,computerMove) {
@@ -61,6 +59,28 @@ function getWinner(playerMove,computerMove) {
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
     /* YOUR CODE HERE */
+    if (getWinner('rock','scissors')) {
+        return "player";
+    } else if (getWinner('rock','paper')) {
+        return "computer";
+    } else if (getWinner('rock','rock')) {
+            return "tie";
+        }
+    if (getWinner('scissors','paper')) {
+        return "player";
+    } else if (getWinner('scissors','rock')) {
+        return "computer";
+    } else if (getWinner('scissors','scissors')) {
+            return "tie";
+        }
+    if (getWinner('paper','rock')) {
+        return "player";
+    } else if (getWinner('paper','scissors')) {
+        return "computer";
+    } else if (getWinner('paper','paper')) {
+            return "tie";
+        }
+    }
     return winner;
 }
 
